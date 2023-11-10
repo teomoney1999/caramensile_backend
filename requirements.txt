@@ -3,6 +3,7 @@ flask-restful
 # DATABASE
 alembic
 Flask-SQLAlchemy
+psycopg2
 # AUTHENTICATION
 flask-security-too
 python-dateutil
