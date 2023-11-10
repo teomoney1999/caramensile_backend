@@ -1,5 +1,11 @@
+# API
 flask-restful
+# DATABASE
 alembic
 Flask-SQLAlchemy
+# AUTHENTICATION
 flask-security-too
 python-dateutil
+# DEPLOYMENT
+wheel
+gunicorn
