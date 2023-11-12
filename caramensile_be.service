@@ -6,7 +6,7 @@ User=root
 Group=root
 WorkingDirectory=/opt/caramensile_be/repo
 Environment="PATH=/opt/caramensile_be/bin"
-ExecStart=/opt/caramensile_be/bin/../repo gunicorn --bind 0.0.0.0:5000 wsgi:app
+ExecStart=/opt/caramensile_be/bin/gunicorn --bind 0.0.0.0:5000 caramensile_be.repo.wsgi:app
 Restart=on-failure
 RestartSec=5
 StandardOutput=syslog
