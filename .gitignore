@@ -3,6 +3,8 @@ nohup.out
 alembic/**/__pycache__
 alembic/versions
 application/**/__pycache__
+__pycache__
+__pycache__/*
 .vscode/*
 .project
 .pydevproject
