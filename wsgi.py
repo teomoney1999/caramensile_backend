@@ -10,3 +10,4 @@ if __name__ == "__main__":
 # systemctl daemon-reload
 # systemctl restart caramensile_be.service
 # journalctl -u caramensile_be.service -f
+# /etc/systemd/system/caramensile_be.service 

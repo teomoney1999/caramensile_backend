@@ -11,3 +11,5 @@ python-dateutil
 # DEPLOYMENT
 wheel
 gunicorn
+
+# /Users/teomoney/Documents/Caramen Sỉ Lẻ/teomoney/repo

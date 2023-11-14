@@ -13,4 +13,8 @@ def init_controllers(app):
     import application.controllers.warehouse.warehouse
     import application.controllers.warehouse.transaction
     
+    @app.route("/") 
+    def home(): 
+        return "Welcome, Teomoney!!!"
+    
     
