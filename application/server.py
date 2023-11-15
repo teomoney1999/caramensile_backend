@@ -2,6 +2,7 @@
 
 from flask import Flask 
 from flask_restful import Resource, Api
+from flask_cors import CORS
 from .config.dev_config import Config
 
 from .database import init_database
@@ -12,6 +13,7 @@ app = Flask(__name__)
 api = Api(app) 
 
 app.config.from_object(Config)
+CORS(app)
 
 # import application.models.authentication
 # import application.models.customer

@@ -11,5 +11,7 @@ python-dateutil
 # DEPLOYMENT
 wheel
 gunicorn
+# CORS
+flask-cors
 
 # /Users/teomoney/Documents/Caramen Sỉ Lẻ/teomoney/repo
