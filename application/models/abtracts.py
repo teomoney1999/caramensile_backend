@@ -7,6 +7,7 @@ class Contact(db.Model):
     __abstract__ = True
     phone = db.Column(String(), index=True) 
     zalo = db.Column(String(), index=True) 
+    zalo_phone = db.Column(String(), index=True)
     facebook = db.Column(String()) 
     facebook_name = db.Column(String(), index=True)
 
