@@ -63,8 +63,8 @@ class OrderDetail(CommonModel):
     order = db.relationship("Order", back_populates="order_detail") 
     order_id = db.Column(UUID(as_uuid=True), ForeignKey("orders.id"), index=True)
     
-    product_id = db.Column(UUID(as_uuid=True), ForeignKey("products.id"))
-    product = db.relationship("Product")
+    product_id = db.Column(UUID(as_uuid=True), ForeignKey("products.id"), nullable=True)
+    product = db.relationship("Product", nullable=True)
     
 
     
