@@ -7,18 +7,27 @@ class Delivery(CommonModel):
     __tablename__ = "deliveries" 
     destination = db.Column(String()) 
     distance = db.Column(DECIMAL) 
+    
     # RESPONSE TIME
-    # stared_at = db.Column(BigInteger()) 
     started_at = db.Column(BigInteger()) 
     ended_at = db.Column(BigInteger()) 
+    appointed_at = db.Column(BigInteger()) 
     
     # FEES
     fee_customer_paid = db.Column(DECIMAL)
     fee_company_paid = db.Column(DECIMAL) 
     total_fee = db.Column(DECIMAL)
     
+    status = db.Column(SmallInteger(), index=True, default=0)  # 0: received order, 1: ready for delivery 2: on the road, 3: shipped, 4: failed
+    is_current = db.Column(SmallInteger(), index=True, default=0)
+    
     order = db.relationship("Order", back_populates="delivery") 
     order_id = db.Column(UUID(as_uuid=True), ForeignKey("orders.id"), index=True)
+    
+    shipper_id = db.Column(UUID(as_uuid=True), ForeignKey("users.id"), index=True, nullable=True)
+    shipper = db.relationship("User")
+    shipper_name = db.Column(String()) 
+    shipper_phone = db.Column(String())
     
     
 class Order(CommonModel): 
@@ -26,12 +35,12 @@ class Order(CommonModel):
     no = db.Column(Integer(), autoincrement=True, index=True) 
     # STATUS
     payment_status = db.Column(SmallInteger(), index=True, default=0)   # 0: no paid, 1: paid
-    delivery_status = db.Column(SmallInteger(), index=True, default=0)  # 0: received order, 1: ready for delivery 2: on the road, 3: shipped
+    delivery_status = db.Column(SmallInteger(), index=True, default=0)  # 0: received order, 1: ready for delivery 2: on the road, 3: shipped, 4: failed
     status = db.Column(SmallInteger(), index=True, default=0)  # 0: received, 1: ready, 2: shipping, 3: successful, 4: failed
     
     # WHEN FINISHED ORDER
     completed_at = db.Column(BigInteger()) 
-    paid_at = db.Column(BigInteger()) 
+    paid_at = db.Column(BigInteger())   # count when a customer finish paying for an order
     shipped_at = db.Column(BigInteger()) 
     
     # DELIVERY
@@ -42,13 +51,14 @@ class Order(CommonModel):
     payment_method = db.Column(SmallInteger(), default=0)   # 0: cash payment, 1: bank payment
     order_amount = db.Column(DECIMAL) 
     total_amount = db.Column(DECIMAL) 
+    paid_amount = db.Column(DECIMAL)
     
     customer_id = db.Column(UUID(as_uuid=True), ForeignKey("customers.id"), index=True)
     customer = db.relationship("Customer", back_populates="order")
     
     order_detail = db.relationship("OrderDetail", back_populates="order")
     
-    delivery = db.relationship("Delivery", back_populates="order")
+    delivery = db.relationship("Delivery", back_populates="order", uselist=False)
     
 
 class OrderDetail(CommonModel): 
