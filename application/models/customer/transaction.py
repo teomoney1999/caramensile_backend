@@ -19,7 +19,6 @@ class Delivery(CommonModel):
     total_fee = db.Column(DECIMAL)
     
     status = db.Column(SmallInteger(), index=True, default=0)  # 0: received order, 1: ready for delivery 2: on the road, 3: shipped, 4: failed
-    is_current = db.Column(SmallInteger(), index=True, default=0)
     
     order = db.relationship("Order", back_populates="delivery") 
     order_id = db.Column(UUID(as_uuid=True), ForeignKey("orders.id"), index=True)

@@ -206,7 +206,7 @@ class ApiView(Resource):
         self.session.rollback()
         errors = extract_error_messages(exception) or \
             'Could not determine specific validation errors'
-        return make_response(jsonify(dict(validation_errors=errors), 520))
+        return make_response(jsonify(dict(validation_errors=errors)), 520)
     
      # TODO change this to have more sensible arguments
     def _update_relations(self, query, params):
