@@ -1,0 +1,74 @@
+{
+    "first_name": {
+        "type": "string"
+    },
+    "last_name": {
+        "type": "string"
+    },
+    "date_birth": {
+        "type": "number"
+    },
+    "gender": {
+        "type": "number",
+        "default": 0
+    },
+    "user_id": {
+        "type": "string"
+    },
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "created_by": {
+        "type": "string",
+        "length": 255
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted_at": {
+        "type": "number"
+    },
+    "bank_name": {
+        "type": "string"
+    },
+    "bank_number": {
+        "type": "string"
+    },
+    "bank_qr_code": {
+        "type": "string"
+    },
+    "phone": {
+        "type": "string"
+    },
+    "zalo": {
+        "type": "string"
+    },
+    "zalo_phone": {
+        "type": "string"
+    },
+    "facebook": {
+        "type": "string"
+    },
+    "facebook_name": {
+        "type": "string"
+    },
+    "user": {
+        "type": "dict"
+    }
+}

@@ -391,7 +391,7 @@ class CollectionApiView(ApiView):
         if isinstance(result, Query): 
             # TODO using _paginated()
             objects = [to_dict(r, deep) for r in result]
-            result = dict(page=1, objects=objects, total_page=1, num_results=len(objects))
+            result = dict(pages=1, objects=objects, total_pages=1, num_results=len(objects))
             pass
         else: 
             result = to_dict(result, deep) 

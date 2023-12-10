@@ -1,0 +1,87 @@
+{
+    "no": {
+        "type": "number"
+    },
+    "payment_status": {
+        "type": "number",
+        "default": 0
+    },
+    "delivery_status": {
+        "type": "number",
+        "default": 0
+    },
+    "status": {
+        "type": "number",
+        "default": 0
+    },
+    "completed_at": {
+        "type": "number"
+    },
+    "paid_at": {
+        "type": "number"
+    },
+    "shipped_at": {
+        "type": "number"
+    },
+    "delivery_fee": {
+        "type": "number"
+    },
+    "delivery_attempt": {
+        "type": "number",
+        "default": 0
+    },
+    "payment_method": {
+        "type": "number",
+        "default": 0
+    },
+    "order_amount": {
+        "type": "number"
+    },
+    "total_amount": {
+        "type": "number"
+    },
+    "paid_amount": {
+        "type": "number"
+    },
+    "customer_id": {
+        "type": "string"
+    },
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "created_by": {
+        "type": "string",
+        "length": 255
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted_at": {
+        "type": "number"
+    },
+    "customer": {
+        "type": "dict"
+    },
+    "order_detail": {
+        "type": "list"
+    },
+    "delivery": {
+        "type": "list"
+    }
+}

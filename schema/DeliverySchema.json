@@ -1,0 +1,77 @@
+{
+    "destination": {
+        "type": "string"
+    },
+    "distance": {
+        "type": "number"
+    },
+    "started_at": {
+        "type": "number"
+    },
+    "ended_at": {
+        "type": "number"
+    },
+    "appointed_at": {
+        "type": "number"
+    },
+    "fee_customer_paid": {
+        "type": "number"
+    },
+    "fee_company_paid": {
+        "type": "number"
+    },
+    "total_fee": {
+        "type": "number"
+    },
+    "status": {
+        "type": "number",
+        "default": 0
+    },
+    "order_id": {
+        "type": "string"
+    },
+    "shipper_id": {
+        "type": "string"
+    },
+    "shipper_name": {
+        "type": "string"
+    },
+    "shipper_phone": {
+        "type": "string"
+    },
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "created_by": {
+        "type": "string",
+        "length": 255
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted_at": {
+        "type": "number"
+    },
+    "order": {
+        "type": "dict"
+    },
+    "shipper": {
+        "type": "dict"
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "name": {
+        "type": "string",
+        "required": true
+    },
+    "address": {
+        "type": "string"
+    },
+    "last_buy_date": {
+        "type": "number"
+    },
+    "brand_id": {
+        "type": "string"
+    },
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "created_by": {
+        "type": "string",
+        "length": 255
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted_at": {
+        "type": "number"
+    },
+    "phone": {
+        "type": "string"
+    },
+    "zalo": {
+        "type": "string"
+    },
+    "zalo_phone": {
+        "type": "string"
+    },
+    "facebook": {
+        "type": "string"
+    },
+    "facebook_name": {
+        "type": "string"
+    },
+    "bank_name": {
+        "type": "string"
+    },
+    "bank_number": {
+        "type": "string"
+    },
+    "bank_qr_code": {
+        "type": "string"
+    },
+    "brand": {
+        "type": "dict"
+    },
+    "order": {
+        "type": "list"
+    }
+}

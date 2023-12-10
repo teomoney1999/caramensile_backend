@@ -80,5 +80,5 @@ def generate_schema(path = "schema", exclude = None, prettyprint = True):
 
 
 if __name__ == "__main__":
-    # generate_schema()
-    run_app()
+    generate_schema()
+    # run_app()

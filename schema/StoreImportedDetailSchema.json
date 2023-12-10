@@ -1,0 +1,47 @@
+{
+    "quantity": {
+        "type": "number",
+        "default": 0
+    },
+    "product_id": {
+        "type": "string"
+    },
+    "storeimported_id": {
+        "type": "string"
+    },
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "created_by": {
+        "type": "string",
+        "length": 255
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted_at": {
+        "type": "number"
+    },
+    "product": {
+        "type": "dict"
+    },
+    "storeimported": {
+        "type": "dict"
+    }
+}

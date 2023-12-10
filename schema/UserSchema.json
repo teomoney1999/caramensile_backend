@@ -1,0 +1,57 @@
+{
+    "email": {
+        "type": "string",
+        "required": true
+    },
+    "password": {
+        "type": "string",
+        "required": true
+    },
+    "confirm_password": {
+        "type": "string",
+        "length": null
+    },
+    "salt": {
+        "type": "string",
+        "required": true
+    },
+    "is_login": {
+        "type": "number",
+        "default": 0
+    },
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "created_by": {
+        "type": "string",
+        "length": 255
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_by": {
+        "type": "string",
+        "length": 255
+    },
+    "deleted_at": {
+        "type": "number"
+    },
+    "personal_information": {
+        "type": "list"
+    },
+    "role": {
+        "type": "list"
+    }
+}
